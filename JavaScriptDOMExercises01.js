@@ -28,3 +28,19 @@ function changeBack(){
 
 /* ---------------------------------------------------- */
 
+/* 
+Exercise 02
+Add a link back to the source of the text after the paragraph tag. (https://forcemipsum.com/)
+*/
+
+function link(){
+    let linkItem = document.createElement("a");
+    linkItem.setAttribute("href", "https://forcemipsum.com/");
+    linkItem.setAttribute("target", "_blank");
+    let linkText = document.createTextNode(" Go to source"); 
+    linkItem.appendChild(linkText)
+    document.querySelector(".paragraph").appendChild(linkItem)
+}
+
+
+/* ---------------------------------------------------- */
