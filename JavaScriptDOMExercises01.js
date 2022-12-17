@@ -44,3 +44,27 @@ function link(){
 
 
 /* ---------------------------------------------------- */
+
+/*
+Exercise 03
+Split each new sentence on to a separate line in the paragraph text.
+A sentence can be assumed to be a string of text terminated with a period (.) 
+*/
+
+function newLime(){
+    let text = document.querySelector(".paragraph").innerText
+    let splitText = text.split(".")
+    console.log(splitText)
+    let newText = splitText.map((item)=>{
+        let newItem = ''
+        newItem = `${item} <br>`
+        return newItem
+    })
+    console.log(newText)
+    document.querySelector(".paragraph").innerHTML = newText
+}
+
+
+/* ---------------------------------------------------- */
+
+
