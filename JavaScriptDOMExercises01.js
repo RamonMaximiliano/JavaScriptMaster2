@@ -68,3 +68,20 @@ function newLime(){
 /* ---------------------------------------------------- */
 
 
+/* 
+Exercise 04
+Count the number of words in the paragraph tag and display the count afer the heading. You can assume that all words are separated by one singular whitespace. 
+*/
+
+function count(){
+    let text = document.querySelector(".paragraph").innerText
+    let splitText = text.split(" ")
+    console.log(splitText)
+    console.log(splitText.length)
+
+    let count = document.createElement("p")
+    let countResult = document.createTextNode(`The number of words is ${splitText.length}`)
+    count.appendChild(countResult)
+    document.querySelector(".Heading").appendChild(count)
+
+}
