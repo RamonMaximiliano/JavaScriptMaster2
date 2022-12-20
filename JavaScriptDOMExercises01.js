@@ -83,5 +83,23 @@ function count(){
     let countResult = document.createTextNode(`The number of words is ${splitText.length}`)
     count.appendChild(countResult)
     document.querySelector(".Heading").appendChild(count)
-
 }
+
+
+/* ---------------------------------------------------- */
+
+
+/*
+Exercise 05
+Replace all question marks (?) with thinking faces (🤔) and exclamation marks (!) with astonished faces (😲)
+*/
+
+
+function replace(){
+    let text = document.querySelector(".paragraph").innerText
+    let faceReplaced = text.replaceAll('?','🤔')
+    let allReplaced = faceReplaced.replaceAll('!','😲')
+    document.querySelector(".paragraph").innerHTML = allReplaced
+}
+
+/* ---------------------------------------------------- */
