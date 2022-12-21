@@ -1,0 +1,48 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(77, 77, 248);
+    color:white;
+}
+
+
+.main-header{
+    background-color: rgb(110, 0, 0);
+    height: 80px;
+    padding:10px;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    justify-content:left;
+}
+.menu li{
+    list-style:none;
+padding:10px;
+}
+
+.menu a{
+    text-decoration: none;
+    color:white;
+}
+
+.Highlight{
+    padding:5px;
+    color:white;
+    background-color: rgb(11, 11, 97);
+    margin-top:10px;
+    cursor: pointer;
+}
+.Highlight:hover{
+    background-color: rgb(27, 27, 179);
+}
+
+.main-div{
+    margin:15px;
+
+}
