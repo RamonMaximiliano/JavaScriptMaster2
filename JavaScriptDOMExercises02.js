@@ -11,6 +11,23 @@ https://www.youtube.com/watch?v=qQy5K-pE8Fo&list=PLpc_YvcwbxaSn6jn0VaTcG8A0Grgs1
   Add a label to each of the input fields: username, password, confirm password
 */
 
+let user = document.getElementById("username")
+let userLabel = "<label for='username' name='username'>Username</label><br>"
+user.insertAdjacentHTML("beforebegin", userLabel)
+
+let Password = document.getElementById("Password")
+let PasswordLabel = "<label for='Password' name='Password'>Password</label><br>"
+Password.insertAdjacentHTML("beforebegin", PasswordLabel)
+
+let ConfirmPassword = document.getElementById("ConfirmPassword")
+let ConfirmPasswordLabel = "<label for='ConfirmPassword' name='ConfirmPassword'>ConfirmPassword</label><br>"
+ConfirmPassword.insertAdjacentHTML("beforebegin", ConfirmPasswordLabel)
+
+let submit = document.getElementById("submit")
+let submitSpace = "<br>"
+submit.insertAdjacentHTML("beforebegin", submitSpace)
+
+
 
 /*
   Exercise 02
