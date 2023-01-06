@@ -18,12 +18,12 @@
     </header>
 
     <div class="main-div">
-        <form>
+        <form onsubmit="event.preventDefault()">
             <h1 id="form">Registration Form</h1>
                 <input id="username" type="text"><br>
                 <input id="Password" type="text"><br>
                 <input id="ConfirmPassword" type="text"><br>
-           <input type="submit" id="submit">
+           <input type="submit" id="submit"  style="width:100px; height:30px;" onclick="submitForm()">
         </form>
 
     ---------------------------------------------
