@@ -77,6 +77,17 @@ function submitForm() {
   Add a further validation to check if the user input in the password and confirm password inputs match.  Show an error message if they do not.
 */
 
+function match(){
+  let password = document.getElementById("Password").value
+  let ConfirmPassword = document.getElementById("ConfirmPassword").value
+
+  if(password != ConfirmPassword) {
+    window.alert("Your passwords don't match! Please type again!")
+    document.getElementById("Password").value = ''
+    document.getElementById("ConfirmPassword").value = ''
+  }
+}
+
 /*
   Exercise 04
   -----------
