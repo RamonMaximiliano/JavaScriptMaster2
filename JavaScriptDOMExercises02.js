@@ -118,3 +118,14 @@ window.onload = checkResult;
   -----------
 When the user clicks the ‘Register’ button, a message should be displayed informing them of a successful user registration.
 */
+
+function register(){
+  let user = document.getElementById("username").value;
+  let Password = document.getElementById("Password").value;
+  let ConfirmPassword = document.getElementById("ConfirmPassword").value;
+
+if (Password == ConfirmPassword && user != ''){
+  window.alert("Registered successfully!")
+}
+
+}
