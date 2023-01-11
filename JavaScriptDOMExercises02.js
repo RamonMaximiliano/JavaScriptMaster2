@@ -77,14 +77,14 @@ function submitForm() {
   Add a further validation to check if the user input in the password and confirm password inputs match.  Show an error message if they do not.
 */
 
-function match(){
-  let password = document.getElementById("Password").value
-  let ConfirmPassword = document.getElementById("ConfirmPassword").value
+function match() {
+  let password = document.getElementById("Password").value;
+  let ConfirmPassword = document.getElementById("ConfirmPassword").value;
 
-  if(password != ConfirmPassword) {
-    window.alert("Your passwords don't match! Please type again!")
-    document.getElementById("Password").value = ''
-    document.getElementById("ConfirmPassword").value = ''
+  if (password != ConfirmPassword) {
+    window.alert("Your passwords don't match! Please type again!");
+    document.getElementById("Password").value = "";
+    document.getElementById("ConfirmPassword").value = "";
   }
 }
 
@@ -93,6 +93,25 @@ function match(){
   -----------
 Ensure the ‘Register’ button is disabled until the user has entered valid data into all the input fields.  Once they have, the registration button should then be enabled.
 */
+
+let inputs = document.querySelectorAll(".inputs");
+for (item of inputs) {
+  item.addEventListener("input", checkResult);
+}
+function checkResult() {
+  let user = document.getElementById("username").value;
+  let Password = document.getElementById("Password").value;
+  let ConfirmPassword = document.getElementById("ConfirmPassword").value;
+  let button = document.getElementById("submit");
+  if (user == "" || Password == "" || ConfirmPassword == "") {
+    button.style.display = "none";
+  } else {
+    button.style.display = "flex";
+  }
+}
+window.onload = checkResult;
+
+
 
 /*
   Exercise 05
