@@ -5,7 +5,53 @@
   Exercise 01
   -----------
   Add 3 additional jobs to the 'Jobs' section of the page by copying the template in the initial 'job-card'.
+
+ <div class="job-card">
+            <h3>Software Engineer</h3>
+            <h4>$50,0000</h4>
+            <ul>
+              <li>Node.js</li>
+              <li>Git</li>
+              <li>AWS</li>
+          </ul>
+        </div>
 */
+
+let div = document.createElement("div")
+div.setAttribute("class","job-card")
+
+let h3 = document.createElement("h3")
+let h3Text = document.createTextNode("Support assistant")
+h3.appendChild(h3Text)
+
+let h4 = document.createElement("h4")
+let h4Text = document.createTextNode("$60,0000")
+h4.appendChild(h4Text)
+
+let ul = document.createElement("ul")
+
+let li1 = document.createElement("li")
+let li1Text = document.createTextNode("Java")
+li1.appendChild(li1Text)
+
+let li2 = document.createElement("li")
+let li2Text = document.createTextNode("JavaScript")
+li2.appendChild(li2Text)
+
+let li3 = document.createElement("li")
+let li3Text = document.createTextNode("PHP")
+li3.appendChild(li3Text)
+
+div.appendChild(h3)
+div.appendChild(h4)
+div.appendChild(ul)
+ul.appendChild(li1)
+ul.appendChild(li3)
+ul.appendChild(li2)
+
+let maindiv = document.querySelector(".jobs")
+
+maindiv.appendChild(div)
 
 /*
   Exercise 02
