@@ -115,3 +115,8 @@ body{
     padding: 15px;
   }
   
+  .black{
+    color:black;
+    font-weight: bold;
+    margin-left:20px;
+  }

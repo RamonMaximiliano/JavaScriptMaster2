@@ -53,11 +53,22 @@ let maindiv = document.querySelector(".jobs")
 
 maindiv.appendChild(div)
 
+
 /*
   Exercise 02
   -----------
   Update the job titles of the new jobs to be: JavaScript Developer, Java Developer, Python Developer
 */
+
+/* O colchetes pega o item segundo a aparecer no HTML, pois começa a nodelist de tags H3 pelo zero. */
+
+
+let testtag = document.getElementsByTagName("h3")[1]
+testtag.innerText = "Java Developer";
+
+
+
+
 
 /*
   Exercise 03
