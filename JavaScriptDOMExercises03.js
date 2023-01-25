@@ -74,7 +74,15 @@ testtag.innerText = "Java Developer";
   Exercise 03
   -----------
   Update the number of jobs listed in the hero section to indicate how many jobs you have listed in the 'Jobs section'.
+
 */
+
+let Nodelist = document.querySelectorAll(".job-card")
+console.log(Nodelist.length)
+
+let spantag = document.getElementById("spanTag")
+spantag.innerHTML = Nodelist.length;
+
 
 /*
   Exercise 04
