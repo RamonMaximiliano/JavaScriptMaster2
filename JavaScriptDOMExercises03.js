@@ -55,6 +55,7 @@ maindiv.appendChild(div)
 
 
 /*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Exercise 02
   -----------
   Update the job titles of the new jobs to be: JavaScript Developer, Java Developer, Python Developer
@@ -63,14 +64,14 @@ maindiv.appendChild(div)
 /* O colchetes pega o item segundo a aparecer no HTML, pois começa a nodelist de tags H3 pelo zero. */
 
 
-let testtag = document.getElementsByTagName("h3")[1]
+let testtag = document.getElementsByTagName("h3")[3]
 testtag.innerText = "Java Developer";
 
 
 
-
-
 /*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
   Exercise 03
   -----------
   Update the number of jobs listed in the hero section to indicate how many jobs you have listed in the 'Jobs section'.
@@ -78,19 +79,35 @@ testtag.innerText = "Java Developer";
 */
 
 let Nodelist = document.querySelectorAll(".job-card")
-console.log(Nodelist.length)
 
 let spantag = document.getElementById("spanTag")
 spantag.innerHTML = Nodelist.length;
 
 
 /*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
   Exercise 04
   -----------
   Configure the search input box to filter jobs listed to only match the text that has been provided in the search. Check for the search text in the job title heading.
 */
 
+
+
+let jobItems = document.querySelectorAll(".job-card");
+
+console.log(jobItems)
+
+
+
+
+
+
+
+
 /*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
   Exercise 05
   -----------
   Configure the 'All jobs' button to reset the search and show all jobs available on the page
