@@ -92,15 +92,20 @@ spantag.innerHTML = Nodelist.length;
   Configure the search input box to filter jobs listed to only match the text that has been provided in the search. Check for the search text in the job title heading.
 */
 
-
-
 let jobItems = document.querySelectorAll(".job-card");
+let searchButton = document.getElementById("search")
+searchButton.addEventListener("input",searchFilter)
 
-console.log(jobItems)
+function searchFilter(){
+for (x=0;x<4;x++){
+  jobItems[x].setAttribute("style", "display:none")
+};
+
+let searchButtonValue = document.getElementById("search").value
+console.log(searchButtonValue)
 
 
-
-
+}
 
 
 
