@@ -99,15 +99,27 @@ searchButton.addEventListener("input",searchFilter)
 function searchFilter(){
 for (x=0;x<4;x++){
   jobItems[x].setAttribute("style", "display:none")
+
+  let jobTitle = jobItems[x].innerHTML.toString().split("<h3>")[1]
+  console.log(jobTitle)
 };
 
 let searchButtonValue = document.getElementById("search").value
 console.log(searchButtonValue)
 
 
+/* a variavel jobTitle precisa ser comparada letra por letra com a variavel searchButtonValue, e então adicionar o "style", "display:none"
+ */
+
+
 }
 
+function allJobs(){
+  for (x=0;x<4;x++){
+    jobItems[x].setAttribute("style", "display:block")
+  };
 
+}
 
 
 /*
