@@ -1,4 +1,3 @@
-
 /* https://www.youtube.com/watch?v=kLX3t1aV1As&list=PLpc_YvcwbxaSn6jn0VaTcG8A0Grgs1GSB&index=14&ab_channel=codebubb */
 
 /*
@@ -17,42 +16,41 @@
         </div>
 */
 
-let div = document.createElement("div")
-div.setAttribute("class","job-card")
+let div = document.createElement("div");
+div.setAttribute("class", "job-card");
 
-let h3 = document.createElement("h3")
-let h3Text = document.createTextNode("Support assistant")
-h3.appendChild(h3Text)
+let h3 = document.createElement("h3");
+let h3Text = document.createTextNode("Support assistant");
+h3.appendChild(h3Text);
 
-let h4 = document.createElement("h4")
-let h4Text = document.createTextNode("$60,0000")
-h4.appendChild(h4Text)
+let h4 = document.createElement("h4");
+let h4Text = document.createTextNode("$60,0000");
+h4.appendChild(h4Text);
 
-let ul = document.createElement("ul")
+let ul = document.createElement("ul");
 
-let li1 = document.createElement("li")
-let li1Text = document.createTextNode("Java")
-li1.appendChild(li1Text)
+let li1 = document.createElement("li");
+let li1Text = document.createTextNode("Java");
+li1.appendChild(li1Text);
 
-let li2 = document.createElement("li")
-let li2Text = document.createTextNode("JavaScript")
-li2.appendChild(li2Text)
+let li2 = document.createElement("li");
+let li2Text = document.createTextNode("JavaScript");
+li2.appendChild(li2Text);
 
-let li3 = document.createElement("li")
-let li3Text = document.createTextNode("PHP")
-li3.appendChild(li3Text)
+let li3 = document.createElement("li");
+let li3Text = document.createTextNode("PHP");
+li3.appendChild(li3Text);
 
-div.appendChild(h3)
-div.appendChild(h4)
-div.appendChild(ul)
-ul.appendChild(li1)
-ul.appendChild(li3)
-ul.appendChild(li2)
+div.appendChild(h3);
+div.appendChild(h4);
+div.appendChild(ul);
+ul.appendChild(li1);
+ul.appendChild(li3);
+ul.appendChild(li2);
 
-let maindiv = document.querySelector(".jobs")
+let maindiv = document.querySelector(".jobs");
 
-maindiv.appendChild(div)
-
+maindiv.appendChild(div);
 
 /*
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -63,11 +61,8 @@ maindiv.appendChild(div)
 
 /* O colchetes pega o item segundo a aparecer no HTML, pois começa a nodelist de tags H3 pelo zero. */
 
-
-let testtag = document.getElementsByTagName("h3")[3]
+let testtag = document.getElementsByTagName("h3")[3];
 testtag.innerText = "Java Developer";
-
-
 
 /*
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -78,11 +73,10 @@ testtag.innerText = "Java Developer";
 
 */
 
-let Nodelist = document.querySelectorAll(".job-card")
+let Nodelist = document.querySelectorAll(".job-card");
 
-let spantag = document.getElementById("spanTag")
+let spantag = document.getElementById("spanTag");
 spantag.innerHTML = Nodelist.length;
-
 
 /*
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -93,34 +87,34 @@ spantag.innerHTML = Nodelist.length;
 */
 
 let jobItems = document.querySelectorAll(".job-card");
-let searchButton = document.getElementById("search")
-searchButton.addEventListener("input",searchFilter)
+let searchButton = document.getElementById("search");
+searchButton.addEventListener("input", searchFilter);
 
-function searchFilter(){
-for (x=0;x<4;x++){
-  jobItems[x].setAttribute("style", "display:none")
+function searchFilter() {
+  for (x = 0; x < 4; x++) {
+    jobItems[x].setAttribute("style", "display:none");
+  }
 
-  let jobTitle = jobItems[x].innerHTML.toString().split("<h3>")[1]
-  console.log(jobTitle)
-};
+  let searchButtonValue = document.getElementById("search").value;
 
-let searchButtonValue = document.getElementById("search").value
-console.log(searchButtonValue)
+  for (x = 0; x <= jobItems.length; x++) {
 
+    let jobTitle = jobItems[x].innerHTML.toString().split("<h3>")[1];
+    let endComparison = jobTitle.slice(0,searchButtonValue.length);
 
-/* a variavel jobTitle precisa ser comparada letra por letra com a variavel searchButtonValue, e então adicionar o "style", "display:none"
- */
-
-
+      if (searchButtonValue == endComparison) {
+        jobItems[x].setAttribute("style", "display:block");
+      } else if (searchButtonValue != endComparison) {
+        jobItems[x].setAttribute("style", "display:none");
+      } 
+  }
 }
 
-function allJobs(){
-  for (x=0;x<4;x++){
-    jobItems[x].setAttribute("style", "display:block")
-  };
-
+function allJobs() {
+  for (x = 0; x < 4; x++) {
+    jobItems[x].setAttribute("style", "display:block");
+  }
 }
-
 
 /*
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -129,4 +123,3 @@ function allJobs(){
   -----------
   Configure the 'All jobs' button to reset the search and show all jobs available on the page
 */
-
